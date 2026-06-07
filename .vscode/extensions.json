@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+      "BazelBuild.vscode-bazel",
+
+      "ms-python.python",
+      "charliermarsh.ruff",
+      "astral-sh.ty",
+
+
+      "esbenp.prettier-vscode",
+
+    ],
+}
