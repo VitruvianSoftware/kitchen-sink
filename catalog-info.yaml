@@ -1,0 +1,50 @@
+# catalog-info.yaml
+# See https://backstage.io/docs/features/software-catalog/descriptor-format
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kitchen-sink-generated-blueprint
+  description: Bazel project using Aspect Workflows
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - bazel
+    - aspect-workflows
+    - kitchen-sink
+    - multi-language
+    - javascript
+    - typescript
+    - python
+    - go
+    - java
+    - kotlin
+    - cpp
+    - rust
+    - shell
+    - ruby
+    - scala
+  links:
+    - url: https://github.com/VitruvianSoftware/kitchen-sink
+      title: Repository
+      icon: github
+    - url: https://docs.aspect.build/
+      title: Aspect Documentation
+      icon: docs
+
+spec:
+  type: service
+  lifecycle: experimental
+  owner: platform-team
+  system: software-foundation
+---
+# The Component above declares `system: software-foundation`. Backstage never
+# creates a System implicitly, so without this the reference dangles wherever a
+# directly-generated repo is registered.
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: software-foundation
+  title: Software Foundation
+  description: Bazel monorepos generated from the Aspect Workflows template
+spec:
+  owner: platform-team
